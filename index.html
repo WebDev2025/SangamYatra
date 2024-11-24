@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangam Yatra</title>
+    <link rel="icon" href="Images/tab.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .bathing-dates-carousel {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            position: relative;
+        }
+        .carousel-inner h5 {
+            font-weight: bold;
+            color: #dc3545;
+        }
+        /* Custom Arrow Buttons */
+        .custom-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: #e76e6e;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .custom-arrow.left {
+            left: 10px;
+        }
+        .custom-arrow.right {
+            right: 10px;
+        }
+        .custom-arrow:hover {
+            background-color: #dc3545;
+        }
+        .custom-arrow i {
+            font-size: 18px;
+        }
+        #about-heading{
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            position: relative;
+            color: #dc3545;
+        }
+        .bg-success {
+            
+            background-color: #f8f9fa !important;
+        }
+        .about{
+            background: url(Images/about-bg.png);
+        }
+        .text-light{
+            color: #b46132 !important;
+            font-weight: bold !important;
+        }
+        .card-head{
+            color: #dc3545;
+        }
+        .bg-dark{
+            background-color: #2c2c46 !important;
+        }
+        @media (max-width: 576px) {
+          h1, h2, h3 {
+            font-size: 1.5rem; /* Adjust heading font sizes for smaller screens */
+          }
+
+          p {
+              font-size: 1rem; /* Adjust paragraph font sizes */
+              line-height: 1.5; /* Improve readability */
+          }
+            .custom-arrow {
+                width: 30px;
+                height: 30px;
+            }
+            .custom-arrow i {
+                font-size: 14px;
+            }
+            .card-text {
+                font-size: 0.9rem;
+            }
+            .card-footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-success">
+        <div class="container-fluid">
+            
+          <a class="navbar-brand" href="#">
+            <img src="Images/logo.png" alt="Sangam Yatra" width="100" height="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"></li>
+                <a class="nav-link active text-light fs-5" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5" href="#package">Our Offerings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5" href="#custome">Customise Your Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5" href="#contact">Contact Us</a>
+              </li>
+            </ul>
+            <div style="margin-left: auto; font-size: large;">
+                <a href="Brochure.pdf" target="_blank" rel="noopener noreferrer" class="text-danger me-3" id="brochure" style="text-decoration: none;"><b>Our Brochure</b></a>
+                <a href="https://www.facebook.com/share/igKJBmrbKMvYid5r/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" class="text-danger me-3"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/sangam_yatra_?igsh=eXVhMXVvMzFoYWwy&utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-danger me-3"><i class="bi bi-instagram"></i></a>
+            </div>
+    </nav>
+
+    <div > 
+        <img src="Images/index.png" class="img-fluid" alt="Kumbh Mela" style="height: 480px; width: 100%">
+    </div>
+
+    <div class="container mt-3" id="important-dates">
+        <div class="bathing-dates-carousel">
+            <h3 class="text-center mb-4">IMPORTANT BATHING DATES 2025</h3>
+            <div id="bathingDatesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner text-center">
+                    <div class="carousel-item active">
+                        <h5> Paush Poornima</h5>
+                        <p>13 January 2025 (Monday)</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h5>Makar Sankranti</h5>
+                        <p>14 January 2025 (Tuesday)</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h5>Mauni Amavasya</h5>
+                        <p>29 January 2025 (Wednesday)</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h5>Basant Panchami</h5>
+                        <p>3 February 2025 (Monday)</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h5>Achla Saptam</h5>
+                        <p>4 February 2025 (Tuesday)</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h5>Maghi Purnima</h5>
+                        <p>12 February 2025 (Wednesday)</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h5>Maha Shivratri</h5>
+                        <p>26 February 2025 (Wednesday)</p>
+                    </div>
+                </div>
+
+                <button class="custom-arrow left" onclick="prevSlide()">
+                    <i>&lt;</i> <!-- Left arrow symbol -->
+                </button>
+
+                <button class="custom-arrow right" onclick="nextSlide()">
+                    <i>&gt;</i> <!-- Right arrow symbol -->
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container about pt-3 mt-3 object-fit-sm-contain border rounded">
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-lg-6">
+                <div class="card container text-center mb-3" style="width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 text-center" id="about-heading">Kumbh Mela Prayagraj 2025 - A Grand Confluence of Faith and Human</h5>
+                        <div class="row align-items-center">
+                            <div>
+                                <p class="card-text fs-5">
+                                    The Kumbh Mela Prayagraj 2025 is a once-in-a-lifetime spiritual celebration that stands as one of the largest gatherings of humanity on Earth. Recognized as an Intangible Cultural Heritage by UNESCO, this ancient Hindu festival brings together millions of pilgrims, saints, and seekers from all over the world to celebrate faith, devotion, and unity. The upcoming Maha Kumbh Mela is set to take place in Prayagraj (formerly Allahabad) between 13 January 2025 (Pausa Purnima) and 26 February 2025 (Maghi Purnima), promising an experience unlike any other.
+                                </p>
+                            </div>
+                            <!-- <div class="col-md-5">
+                                <img src="about1.jpg" class="rounded" alt="about kumbh" width="450" height="300">
+                            </div> -->
+                        </div>              
+                    </div>
+                </div>
+    
+                <div class="card container text-center mb-3" style="width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 text-center" id="about-heading">The Legacy of Kumbh Mela</h5>
+                        <div class="row align-items-center">
+                            <div>
+                                <p class="card-text fs-5">
+                                    The history of Kumbh Mela spans centuries, with its earliest recorded mention in 1600 AD. At Prayagraj, this sacred festival is steeped in spiritual significance and ancient traditions. It takes place at the holy confluence of Ganga, Yamuna, and the mythical Saraswati rivers, known as the Triveni Sangam. Here, the faithful gather to wash away their sins, seeking blessings and salvation.
+                                    <br><br>
+                                    The Maha Kumbh Mela occurs once every 12 years, rotating among four sacred cities—Haridwar, Prayagraj, Nashik, and Ujjain. Every 6 years, the Ardh Kumbh is held in Prayagraj and Haridwar, offering yet another opportunity for devotees to come together. The festival is a true celebration of India’s spiritual heritage, with roots tied to the celestial and mythological events described in Hindu scriptures.
+                                </p>
+                            </div>
+                            <!-- <div class="col-md-5">
+                                <img src="about2.jpg" class="rounded" alt="about kumbh" width="450" height="300">
+                            </div> -->
+                        </div>              
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Right Column -->
+            <div class="col-lg-6 text-center" id="form">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSe2tuuB2v2nU1telsINizAjupIhonN4Oy1viuo3iWrZMNWx7g/viewform?embedded=true" 
+                    width="100%" 
+                    height="1270" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    class="border rounded">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container about pt-3 mt-3 mb-3 object-fit-sm-contain border rounded" id="package">
+        <div class="row">
+            <div class="col-sm-4 mb-3 mb-sm-0">
+              <div class="card mb-3 text-center">
+                <div class="card-body">
+                  <h5 class="card-header card-title text-center card-head">Camps/hotel Package</h5>
+                  <p class="card-text mt-3">
+                    This 4-night, 5-day Kumbh Mela Tour Package for Prayagraj 2025 invites you to embark on a spiritual journey towards enlightenment and inner peace.
+                  </p>
+                  <div class="card mt-3 mb-3">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Prices Per Persons: 15000 INR</b> </li>
+                      <li class="list-group-item"><b>Meal Plans: Breakfast + Lunch + Dinners</b></li>
+                    </ul>
+                  </div>
+                  <a href="#form" class="btn btn-danger mb-3">Book Now</a>
+                  <div class="card-footer text-body-secondary text-center">
+                    4 Nights 5 Days Package
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-sm-4 mb-3 mb-sm-0">
+                <div class="card mb-3 text-center">
+                  <div class="card-body">
+                    <h5 class="card-header card-title text-center card-head">Budget camp/hotels Package</h5>
+                    <p class="card-text mt-3">
+                        Experience the essence of spirituality at the Kumbh Mela with our exclusive 4-night, 5-day package. Plan your journey and immerse yourself in this divine.
+                    </p>
+                    <div class="card mt-3 mb-3">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Prices Per Persons: 25000 INR</b> </li>
+                        <li class="list-group-item"><b>Meal Plans: Breakfast + Lunch + Dinners</b></li>
+                      </ul>
+                    </div>
+                    <a href="#form" class="btn btn-danger mb-3">Book Now</a>
+                    <div class="card-footer text-body-secondary text-center">
+                      4 Nights 5 Days Package
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mb-3 mb-sm-0">
+                <div class="card mb-3 text-center">
+                  <div class="card-body">
+                    <h5 class="card-header card-title text-center card-head">Deluxe camp/hotels Package</h5>
+                    <p class="card-text mt-3">
+                        Embark on a soul-enriching journey with our Shahi Snan or Kumbh Mela package, offering 4 nights and 5 days of cultural immersion and spiritual bliss.
+                    </p>
+                    <div class="card mt-3 mb-3">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Prices Per Persons: 35000 INR</b> </li>
+                        <li class="list-group-item"><b>Meal Plans: Breakfast + Lunch + Dinners</b></li>
+                      </ul>
+                    </div>
+                    <a href="#form" class="btn btn-danger mb-3">Book Now</a>
+                    <div class="card-footer text-body-secondary text-center">
+                      4 Nights 5 Days Package
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </div>  
+        
+        <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="card mb-3 text-center">
+                <div class="card-body">
+                  <h5 class="card-header card-title text-center card-head"> Luxury camp/hotels Package</h5>
+                  <p class="card-text mt-3">
+                    Discover the sacred traditions of Kumbh Mela with our 4-night, 5-day package, including the divine experience of the Shahi Snan amidst an atmosphere of devotion.
+                  </p>
+                  <div class="card mt-3 mb-3">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Prices Per Persons: 50000 INR</b> </li>
+                      <li class="list-group-item"><b>Meal Plans: Breakfast + Lunch + Dinners</b></li>
+                    </ul>
+                  </div>
+                  <a href="#form" class="btn btn-danger mb-3">Book Now</a>
+                  <div class="card-footer text-body-secondary text-center">
+                    4 Nights 5 Days Package
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3 text-center">
+                  <div class="card-body">
+                    <h5 class="card-header card-title text-center card-head"> Premium Swiss Cottage Package</h5>
+                    <p class="card-text mt-3">
+                        Join us for an unforgettable 4-night, 5-day Kumbh Mela featuring the revered Shahi Snan and a chance to explore the spiritual essence of this grand festival.
+                    </p>
+                    <div class="card mt-3 mb-3">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Prices Per Persons: 75000 INR</b> </li>
+                        <li class="list-group-item"><b>Meal Plans: Breakfast + Lunch + Dinners</b></li>
+                      </ul>
+                    </div>
+                    <a href="#form" class="btn btn-danger mb-3">Book Now</a>
+                    <div class="card-footer text-body-secondary text-center">
+                      4 Nights 5 Days Package
+                    </div>
+                  </div>
+                </div>
+            </div>            
+        </div>    
+    </div>
+
+    <div class="container about pt-3 mt-3 mb-3 object-fit-sm-contain border rounded" id="custome">
+      <div class="row">
+          <div class="col mb-3 mb-sm-0">
+            <div class="card mb-3 text-center">
+              <div class="card-body">
+                <h5 class="card-header card-title text-center card-head">Get Your Custome Package</h5>
+                <p class="card-text mt-3">
+                  Create your perfect Kumbh Mela experience with our Customizable Mela Package, tailored to meet your unique needs. Choose the duration of your stay and the specific activities you wish to include, whether it's attending the holy Shahi Snan, exploring cultural landmarks, or enjoying authentic Satvik meals. Once you share your preferences, our team will promptly contact you with a personalized itinerary and pricing details, ensuring a seamless and spiritually enriching journey. Let us craft a package that matches your schedule and aspirations for this grand spiritual festival!
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdBhPFSyRKzwLmPF4wK_7yBOxrIXdjf-EkIXH7J9cyf6ycvwQ/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="btn btn-danger mb-3">Book Now</a>
+                <div class="card-footer text-body-secondary text-center">
+                  Customise your stay!!!
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>  
+  </div>
+
+    <footer class="bg-dark text-light pt-4 pb-2" id="contact">
+        <div class="container">
+          <div class="row">
+            <!-- About Section -->
+            <div class="col-md-4">
+              <h5 class="text-uppercase">About Kumbh Mela</h5>
+              <p>
+                Experience the world's largest spiritual festival, the Kumbh Mela Prayagraj 2025. Join millions of devotees at the Triveni Sangam for a journey of faith, culture, and heritage.
+              </p>
+            </div>
+      
+            <!-- Quick Links -->
+            <div class="col-md-4">
+              <h5 class="text-uppercase">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#form" class="text-light text-decoration-none">About Kumbh Mela</a></li>
+                <li><a href="#important-dates" class="text-light text-decoration-none">Bathing Dates</a></li>
+                <li><a href="#package" class="text-light text-decoration-none">Packages</a></li>
+                <li><a href="#contact" class="text-light text-decoration-none">Contact Us</a></li>
+                <li><a href="https://drive.google.com/file/d/1YlLPNojVClACuA0hhDDIBFctbYi5ceEo/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none">View Our Brochure</a></li>
+              </ul>
+            </div>
+      
+            <!-- Contact Section -->
+            <div class="col-md-4">
+              <h5 class="text-uppercase">Contact Us</h5>
+              <p>
+                <i class="bi bi-geo-alt-fill"></i> Prayagraj, Uttar Pradesh, India <br>
+                <i class="bi bi-envelope-fill"></i> kumbhmela2025@gmail.com.com <br>
+                <i class="bi bi-telephone-fill"></i> +91 73185 65386
+              </p>
+              <!-- Social Media Links -->
+              <div>
+                <a href="https://www.facebook.com/share/igKJBmrbKMvYid5r/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/sangam_yatra_?igsh=eXVhMXVvMzFoYWwy&utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Bottom Footer -->
+          <div class="row mt-4">
+            <div class="col text-center">
+              <p class="mb-0">&copy; 2025 Kumbh Mela Prayagraj. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        const carousel = document.querySelector('#bathingDatesCarousel');
+        const bootstrapCarousel = bootstrap.Carousel.getOrCreateInstance(carousel); // Get carousel instance
+
+        // Function to go to the previous slide
+        function prevSlide() {
+            bootstrapCarousel.prev();
+        }
+
+        // Function to go to the next slide
+        function nextSlide() {
+            bootstrapCarousel.next();
+        }
+    </script>
+</body>
+</html>
